@@ -6,9 +6,9 @@ ARG GOTIFY_RELEASE=https://github.com/gotify/server/releases/download/v${GOTIFY_
 RUN pacman -Sy --noconfirm unzip >/dev/null
 
 WORKDIR /extract/gotify
-RUN curl --silent --show-error --location --output gotify.tar.gz \
+RUN curl --silent --show-error --location --output gotify.zip \
   "${GOTIFY_RELEASE}" \
-  && unzip gotify.tar.gz
+  && unzip gotify.zip
 
 FROM ghcr.io/simons-containers/distroless-glibc:2.43
 ARG GOTIFY_VERSION
