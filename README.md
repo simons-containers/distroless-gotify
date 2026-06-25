@@ -1,3 +1,7 @@
+![Tags](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/tags?ignore=latest,sha256*)
+![Latest](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/latest_tag?ignore=latest,sha256*&label=latest)
+![Size](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/size?tag=latest)
+
 # Distroless Gotify container
 
 Bare-bones distroless Gotify container image.
