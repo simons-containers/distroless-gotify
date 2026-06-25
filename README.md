@@ -1,6 +1,6 @@
-![Tags](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/tags?ignore=latest,sha256*)
-![Latest](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/latest_tag?ignore=latest,sha256*&label=latest)
-![Size](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/size?tag=latest)
+![Latest](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/latest_tag?ignore=latest,sha256*&label=latest)  
+![Size](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/size?tag=latest)  
+![Tags](https://ghcr-badge.egpl.dev/simons-containers/distroless-gotify/tags?ignore=latest,sha256*)  
 
 # Distroless Gotify container
 
