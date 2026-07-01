@@ -1,3 +1,5 @@
+[![Current Version](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/release.svg)](https://github.com/simons-containers/distroless-gotify/pkgs/container/distroless-gotify) [![Tags](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/tags.svg)](https://github.com/simons-containers/distroless-gotify/pkgs/container/distroless-gotify) <br> ![Current Size](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/size.svg) ![Wasted Size](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/wasted.svg) ![Efficiency](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/efficiency.svg) <br> ![Critical](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/critical.svg) ![High](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/high.svg) ![Medium](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/medium.svg) ![Low](https://raw.githubusercontent.com/simons-containers/distroless-gotify/badges/.badges/main/low.svg) <br> [![Publish Workflow](https://img.shields.io/github/actions/workflow/status/simons-containers/distroless-gotify/deploy.yaml?label=Publish%20Workflow&logo=github)](https://github.com/simons-containers/distroless-gotify/actions/workflows/deploy.yaml) [![Update Workflow](https://img.shields.io/github/actions/workflow/status/simons-containers/distroless-gotify/update-versions.yaml?label=Update%20Workflow&logo=github)](https://github.com/simons-containers/distroless-gotify/actions/workflows/update-versions.yaml)
+
 # Distroless Gotify container
 
 Bare-bones distroless Gotify container image.
@@ -14,20 +16,6 @@ docker run -it --rm \
   -e GOTIFY_SERVER_PORT=8080 \
   -p 8080:8080 \
   ghcr.io/simons-containers/distroless-gotify:latest
-```
-
-## Building
-
-| Arg | Description |
-|---|---|
-| `GOTIFY_VERSION` | Version of Gotify to use
-
-Build container using build-args from versions.yaml:
-
-```bash
-docker build -t \
-  distroless-gotify:$(yq -r .gotify versions.yaml) \
-  $(yq -r 'to_entries | .[] | "--build-arg \(.key | ascii_upcase)_VERSION=\(.value)"' versions.yaml) -f Containerfile .
 ```
 
 ## License
