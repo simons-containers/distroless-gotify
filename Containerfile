@@ -1,9 +1,7 @@
-FROM archlinux:base-devel-20260308.0.497099 AS builder
+FROM cgr.dev/chainguard/curl:latest-dev AS builder
 
 ARG GOTIFY_VERSION
-ARG GOTIFY_RELEASE=https://github.com/gotify/server/releases/download/v${GOTIFY_VERSION}/gotify-linux-amd64.zip
-
-RUN pacman -Sy --noconfirm unzip >/dev/null
+ARG GOTIFY_RELEASE
 
 WORKDIR /extract/gotify
 RUN curl --silent --show-error --location --output gotify.zip \
