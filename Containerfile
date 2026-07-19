@@ -1,14 +1,14 @@
 FROM cgr.dev/chainguard/git:latest-dev AS fetch
 
 ARG GOTIFY_VERSION
-ARG GOTIFY_SOURCE=https://github.com/gotify/server.git/
+ARG GOTIFY_SOURCE=
 
 WORKDIR /fetch
 RUN git config --global advice.detachedHead false
 RUN git clone --depth 1 --branch "v${GOTIFY_VERSION}" \
   "${GOTIFY_SOURCE}" gotify
 
-FROM cgr.dev/chainguard/node:latest-dev as frontend
+FROM cgr.dev/chainguard/node:latest-dev AS frontend
 
 COPY --from=fetch --chown=node:node /fetch/gotify/ui /build/frontend
 WORKDIR /build/frontend
@@ -16,7 +16,7 @@ WORKDIR /build/frontend
 RUN yarn install
 RUN yarn build
 
-FROM cgr.dev/chainguard/go:latest-dev as builder
+FROM cgr.dev/chainguard/go:latest-dev AS builder
 ARG GOTIFY_VERSION
 
 USER nonroot
