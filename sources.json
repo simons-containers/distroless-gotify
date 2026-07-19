@@ -1,6 +1,6 @@
 {
   "gotify": {
-    "version": "2.9.1",
+    "version": "3.0.0",
     "purl": "pkg:generic/gotify",
     "release": {
       "url_pattern": "https://github.com/gotify/server/releases/download/v{version}/gotify-linux-amd64.zip"
