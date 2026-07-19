@@ -1,7 +1,7 @@
 FROM cgr.dev/chainguard/git:latest-dev AS fetch
 
 ARG GOTIFY_VERSION
-ARG GOTIFY_SOURCE=
+ARG GOTIFY_SOURCE
 
 WORKDIR /fetch
 RUN git config --global advice.detachedHead false
