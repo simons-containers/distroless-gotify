@@ -34,7 +34,7 @@ RUN go build \
       -X main.Mode=prod" \
     -o gotify-server
 
-FROM ghcr.io/simons-containers/distroless-glibc:2.43
+FROM ghcr.io/simons-containers/distroless-glibc:2.44
 ARG GOTIFY_VERSION
 
 COPY --from=builder /build/gotify/gotify-server /usr/bin/gotify
