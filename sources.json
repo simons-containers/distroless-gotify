@@ -1,6 +1,6 @@
 {
   "gotify": {
-    "version": "3.0.0",
+    "version": "3.1.0",
     "purl": "pkg:generic/gotify",
     "source": {
       "url": "https://github.com/gotify/server.git/"
